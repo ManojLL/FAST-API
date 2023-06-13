@@ -1,4 +1,5 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from db.db import base
 
 
 class User(BaseModel):
@@ -6,6 +7,3 @@ class User(BaseModel):
     password: str
     qr_code: str
     user_name: str
-
-    class Config:
-        orm_model= True
